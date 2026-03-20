@@ -140,10 +140,10 @@ export default function App() {
           
           {/* Animated Background Gears */}
           <div className="absolute top-10 left-10 opacity-10 text-sky-500 animate-spin-slow">
-            <Settings size={200} strokeWidth={1} />
+            <Settings size={200} className="stroke-1" />
           </div>
           <div className="absolute bottom-10 right-10 opacity-10 text-amber-500 animate-spin-slow-reverse">
-            <Settings size={300} strokeWidth={1} />
+            <Settings size={300} className="stroke-1" />
           </div>
 
           <motion.div 

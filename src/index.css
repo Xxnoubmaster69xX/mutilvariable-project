@@ -8,38 +8,38 @@
 
 @layer utilities {
   .text-glow {
-    text-shadow: 0 0 10px theme('colors.amber.500'), 0 0 20px theme('colors.amber.500');
+    text-shadow: 0 0 10px var(--color-amber-500), 0 0 20px var(--color-amber-500);
   }
   .text-glow-blue {
-    text-shadow: 0 0 10px theme('colors.sky.500'), 0 0 20px theme('colors.sky.500');
+    text-shadow: 0 0 10px var(--color-sky-500), 0 0 20px var(--color-sky-500);
   }
   .text-glow-red {
-    text-shadow: 0 0 10px theme('colors.red.500'), 0 0 20px theme('colors.red.500');
+    text-shadow: 0 0 10px var(--color-red-500), 0 0 20px var(--color-red-500);
   }
   .text-glow-emerald {
-    text-shadow: 0 0 10px theme('colors.emerald.500'), 0 0 20px theme('colors.emerald.500');
+    text-shadow: 0 0 10px var(--color-emerald-500), 0 0 20px var(--color-emerald-500);
   }
   .box-glow {
-    box-shadow: 0 0 15px theme('colors.amber.500/50'), inset 0 0 10px theme('colors.amber.500/20');
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.5), inset 0 0 10px rgba(245, 158, 11, 0.2);
   }
   .box-glow-blue {
-    box-shadow: 0 0 15px theme('colors.sky.500/50'), inset 0 0 10px theme('colors.sky.500/20');
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.5), inset 0 0 10px rgba(14, 165, 233, 0.2);
   }
   .box-glow-red {
-    box-shadow: 0 0 15px theme('colors.red.500/50'), inset 0 0 10px theme('colors.red.500/20');
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.5), inset 0 0 10px rgba(239, 68, 68, 0.2);
   }
   
   .blueprint-grid {
     background-image:
-      linear-gradient(theme('colors.sky.500/10') 1px, transparent 1px),
-      linear-gradient(90deg, theme('colors.sky.500/10') 1px, transparent 1px);
+      linear-gradient(rgba(14, 165, 233, 0.2) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14, 165, 233, 0.2) 1px, transparent 1px);
     background-size: 40px 40px;
   }
   
   .blueprint-grid-dense {
     background-image:
-      linear-gradient(theme('colors.sky.500/10') 1px, transparent 1px),
-      linear-gradient(90deg, theme('colors.sky.500/10') 1px, transparent 1px);
+      linear-gradient(rgba(14, 165, 233, 0.2) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14, 165, 233, 0.2) 1px, transparent 1px);
     background-size: 10px 10px;
   }
 }
