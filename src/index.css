@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px theme('colors.amber.500'), 0 0 20px theme('colors.amber.500');
+  }
+  .text-glow-blue {
+    text-shadow: 0 0 10px theme('colors.sky.500'), 0 0 20px theme('colors.sky.500');
+  }
+  .text-glow-red {
+    text-shadow: 0 0 10px theme('colors.red.500'), 0 0 20px theme('colors.red.500');
+  }
+  .text-glow-emerald {
+    text-shadow: 0 0 10px theme('colors.emerald.500'), 0 0 20px theme('colors.emerald.500');
+  }
+  .box-glow {
+    box-shadow: 0 0 15px theme('colors.amber.500/50'), inset 0 0 10px theme('colors.amber.500/20');
+  }
+  .box-glow-blue {
+    box-shadow: 0 0 15px theme('colors.sky.500/50'), inset 0 0 10px theme('colors.sky.500/20');
+  }
+  .box-glow-red {
+    box-shadow: 0 0 15px theme('colors.red.500/50'), inset 0 0 10px theme('colors.red.500/20');
+  }
+  
+  .blueprint-grid {
+    background-image:
+      linear-gradient(theme('colors.sky.500/10') 1px, transparent 1px),
+      linear-gradient(90deg, theme('colors.sky.500/10') 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  
+  .blueprint-grid-dense {
+    background-image:
+      linear-gradient(theme('colors.sky.500/10') 1px, transparent 1px),
+      linear-gradient(90deg, theme('colors.sky.500/10') 1px, transparent 1px);
+    background-size: 10px 10px;
+  }
+}
+
+@keyframes flow {
+  to { stroke-dashoffset: -20; }
+}
+.animate-flow {
+  animation: flow 1s linear infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+.animate-spin-slow-reverse {
+  animation: spin-slow 15s linear infinite reverse;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .page-break {
+    page-break-before: always;
+  }
+}
+
+.print-only {
+  display: none;
+}
+
